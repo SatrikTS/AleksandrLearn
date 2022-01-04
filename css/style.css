@@ -1,0 +1,185 @@
+/*Обнуление*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;  /* Скинуты все отступы */
+}
+a {
+  text-decoration: none;  /* Убран декорейшн у ссылок */
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top; /* выравниваем по верху изображение, чтобы не было отступа */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit; /* Заголовки зброшены */
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px; /* Шрифт по умолчанию 16 */
+  color: #252b42;
+  font-weight: 500; /*  по умолчанию */
+  font-family: Montserrat;
+  background-color: #000000;
+}
+/* -------------------------------------------------------------------------- */
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* -------------------------------------------------------------------------- */
+/* введем некий технический класс, подчеркивание, чтобы было понятно,
+что не БЭМ класс, некий ограничивающий контейнер */
+.container {
+  max-width: 1110px;
+  /* padding: 0px 15px; */
+  margin: 0px auto; /* что позволит выстроиться по середине */
+  box-sizing: content-box; /* отступы безопасности */
+}
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+/* ---------ШАПКА------------------------------------------------------------------- */
+.header {
+}
+.header-main {
+  display: flex;
+  flex-direction: column;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  max-height: 44px;
+  padding: 14px 0px 14px 0px;
+}
+.header-top__contact {
+}
+.tel-top {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #969696;
+}
+.tel-top img {
+  padding: 0px 15px 0px 0px;
+}
+.header-top__log {
+}
+.login-top {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #969696;
+}
+.login-top img {
+  padding: 0px 10px 0px 0px;
+}
+.header-work {
+  display: flex;
+  justify-content: space-between;
+  max-height: 80px;
+}
+.header-logo {
+  padding: 27px 0px 27px 0px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  min-width: 50%;
+}
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menu__item {
+  padding: 0px 20px;
+}
+.menu__link {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #969696;
+}
+.icon__item {
+  padding: 0px 0px 0px 40px;
+}
+.icon__link {
+}
+/* ----------ГЛАВНАЯ-------------------------------------------------------- */
+.main-block {
+  position: relative;
+}
+/* -----------ФОН----------------------------------------------------------- */
+.backdrop { 
+}
+.backdrop__image {
+  position: absolute;
+}
+.backdrop__image img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+/* -----------БРЭНД------------------------------------------------------------- */
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.brand-block__image {
+  padding: 160px 0px 80px 0px;
+}
+.brand-block__text {
+  width: 730px;
+  justify-content: center;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
