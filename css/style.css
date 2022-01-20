@@ -1,0 +1,545 @@
+/*Обнуление*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;  /* Скинуты все отступы */
+}
+a {
+  text-decoration: none;  /* Убран декорейшн у ссылок */
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+h3 {
+  font-family: PT Sans;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit; /* Заголовки зброшены */
+}
+html,
+body {
+  height: 100%;
+  background-color: #000000;
+}
+/* -------------------------------------------------------------------------- */
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.big-title {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.main {
+  flex: 1 1 auto;
+}
+/* -------------------------------------------------------------------------- */
+/* введем некий технический класс, подчеркивание, чтобы было понятно,
+что не БЭМ класс, некий ограничивающий контейнер */
+.container {
+  max-width: 1110px;
+  /* padding: 0px 15px; */
+  margin: 0px auto; /* что позволит выстроиться по середине */
+  box-sizing: content-box; /* отступы безопасности */
+}
+/* ---------ШАПКА------------------------------------------------------------------- */
+.header {
+  font-family: PT Sans;
+}
+.header-main {
+  display: flex;
+  flex-direction: column;
+}
+/* -header-main----------------- */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  max-height: 44px;
+  padding: 14px 0px 14px 0px;
+}
+/* --header-top------------------ */
+.header-contact {
+  display: flex;
+}
+.header-contact__tel {
+  padding: 3px 0px 0px 0px;
+}
+.header-contact__info {
+  margin: 0px 0px 0px 15px;
+}
+/* ---header-top-------------------- */
+.header-log {
+  display: flex;
+}
+.header-log__gate {
+  padding: 3px 0px 0px 0px;
+}
+.header-log__login {
+  margin: 0px 0px 0px 10px;
+}
+.top-header__text {
+  font-size: 12px;
+  color: #969696;
+}
+/* --header-main-------------------------------------------------------------- */
+.header-work {
+  display: flex;
+  justify-content: space-between;
+  max-height: 80px;
+}
+.header-logo {
+  padding: 27px 0px 27px 0px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  min-width: 50%;
+}
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-menu__item {
+  padding: 0px 20px;
+}
+.header-menu__text {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #969696;
+}
+.header-service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-service__icon {
+  padding: 0px 0px 0px 40px;
+}
+/* ----------ГЛАВНАЯ-------------------------------------------------------- */
+.main-block {
+  position: relative;
+}
+/* -----------ФОН----------------------------------------------------------- */
+.backdrop__image {
+  position: absolute;
+  max-height: 810px;
+}
+.backdrop__image img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+/* -----------БРЭНД------------------------------------------------------------- */
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.brand-block__image {
+  border: 4px solid #FFFFFF;
+  padding: 94px 67px 94px 67px;
+  margin: 160px 0px 80px 0px;
+}
+.brand-block__text {
+  width: 730px;
+  justify-content: center;
+}
+/* ----НОВАЯ ПРОДУКЦИЯ--------------------------------- */
+.new-production {
+  display: flex;
+  flex-direction: row;
+  max-height: 730px;
+  max-width: 1920px;
+  margin: 142px 0px 0px 0px;
+}
+/* ----new-production------------------------- */
+.new-season {
+  width: 54.167%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Playfair Display;
+  color: #FFFFFF;
+  padding: 93px 80px 93px 80px;
+}
+.new-season__big-title {
+  height: 39px;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.new-season__dadline {
+  border: solid 1px #FFFFFF;
+  width: 120px;
+  margin-top: 50px;
+}
+.new-season__wrapper {
+  width: 100%;
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* ---БЛОК-ТОВАР---------------------------------------------- */
+.production-promo__image {
+  max-height: 325px;
+}
+.production-promo__desc {
+  margin: 25px 0px 0px 0px;
+  font-size: 18px;
+}
+.production-promo__price {
+  margin: 10px 0px 0px 0px;
+  font-size: 16px;
+}
+/* ---new-production--------------------- */
+.new-collection {
+  position: relative;
+  width: 45.833%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Playfair Display;
+  color: #FFFFFF;
+}
+.fone-new-collection {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.new-catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Playfair Display;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+}
+.new-catalog__big-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 484px 0px 0px 0px;
+}
+.new-catalog__dadline {
+  border: solid 1px #FFFFFF;
+  width: 120px;
+  margin-top: 30px;
+}
+.new-catalog__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 138px;
+  height: 47px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+.catalog-btn__text {
+  font-family: PT Sans;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+/* ------СТАРАЯ КОЛЛЕКЦИЯ-------------------------------------------------------- */
+.old-production {
+  display: flex;
+  flex-direction: row;
+  max-height: 600px;
+  max-width: 1920px;
+}
+/* ----------------------------- */
+.old-season {
+  position: relative;
+  width: 45.833%;
+}
+.fone-old-season {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* ---------------------------------- */
+.old-collection {
+  width: 54.167%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+  padding: 100px 0px;
+}
+.old-collection__big-title {
+  font-family: Playfair Display;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.old-collection__dadline {
+  border: solid 1px #FFFFFF;
+  width: 120px;
+  margin-top: 40px;
+}
+.old-collection__text {
+  font-family: PT Sans;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  max-width: 471px;
+  margin-top: 40px;
+}
+.old-collection__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 311px;
+  height: 47px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  margin-top: 61px;
+}
+.watch-collection-btn__text {
+  font-family: PT Sans;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+/* ---------------------------------------------- */
+.container {
+  max-width: 1110px;
+}
+.new-goods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Playfair Display;
+  color: #FFFFFF;
+  padding-bottom: 150px;
+}
+.new-goods__big-title {
+  font-family: Playfair Display;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-top: 120px;
+}
+.new-goods__dadline {
+  border: solid 1px #FFFFFF;
+  width: 120px;
+  margin-top: 40px;
+}
+.new-goods__top {
+  margin-top: 81px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.new-goods__bottom {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* ------НАШИ БРЭНДЫ--------------------------------------- */
+.container {
+  max-width: 1110px;
+}
+.our-brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.our-brands__bit-title {
+  font-family: Playfair Display;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-top: 60px;
+  color: #FFFFFF;
+}
+.our-brands__dadline {
+  border: solid 1px #FFFFFF;
+  width: 120px;
+  margin-top: 40px;
+}
+.our-brands__wrapper {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* -----ПОДВАЛ---------------------------------------------- */
+.first-fone {
+  position: absolute;
+}
+/* ---------ПЕРВЫЙ БЛОК ФУТЕРА--------------------------------------------------------------------- */
+.first-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  padding: 80px 0px 0px 0px;
+}
+/* ----О МАГАЗИНЕ-------------------------------------------------------------------------- */
+.about-shop {
+  display: flex;
+  flex-direction: column;
+  max-width: 351px;
+  color: #FFFFFF;
+}
+.about-shop__title {
+  font-family: Playfair Display;
+  font-size: 24px;
+}
+.about-shop__text {
+  margin-top: 40px;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  min-height: 147px;
+  width: 100%;
+}
+/* ----КАТЕГОРИИ------------------------------------------------------------------------------------------ */
+.categories {
+  display: flex;
+  flex-direction: column;
+  max-width: 351px;
+  color: #FFFFFF;
+}
+.categories__title {
+  font-family: Playfair Display;
+  font-size: 24px;
+}
+/* ---КНОПКИ НА КАТЕГОРИИ-------------------------------------------------------------- */
+.categories__wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-button {
+  display: flex;
+  min-height: 41px;
+  margin: 0px 20px 20px 0px;
+  background: #0F0F0F;
+  justify-content: center;
+  align-items: center;
+}
+.category-button-btn__text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #D0D0D0;
+  width: 100%;
+  padding: 0px 20px 0px 20px;
+}
+/* -----РАССЫЛКА-------------------------------------------------------------- */
+.distribution {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  color: #FFFFFF;
+}
+.distribution__title {
+  font-family: Playfair Display;
+  font-size: 24px;
+}
+.distribution__text {
+  margin-top: 40px;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  min-height: 42px;
+  max-width: 350px;
+}
+/* ------ФОРМА РАССЫЛКИ------------------------------------------------------------ */
+.distribution__subscription {
+  width: 100%;
+  margin-top: 38px;
+}
+.subscribe__form {
+  flex: 0 1 50%;
+  display: flex;
+  align-items: center;
+}
+.subscribe__input {
+  flex: 1 1 auto;
+  min-height: 42px;
+  font-size: 14px;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  padding: 10px 0px 10px 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.subscribe__input:focus {
+  color: #000000;
+}
+.suscribe__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 42;
+  background: #0F0F0F;
+  color: #FFFFFF;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+/* -------ВТОРОЙ БЛОК ФУТЕРА----------------------------------------------------------------- */
+.last-line {
+  width: 100%;
+  margin-top: 88px;
+}
+.last-wrappper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+.protection {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #D0D0D0;
+}
+.made-info {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #D0D0D0;
+}
